@@ -27,7 +27,6 @@ public class ConnectUI : MonoBehaviour
 
     public void OnHost()
     {
-        print(":D");
         var transport = net.GetComponent<UnityTransport>();
         var port = portField.text;
         if (port == "") port = "7777";
@@ -54,6 +53,7 @@ public class ConnectUI : MonoBehaviour
 
     void Close()
     {
+        Camera.main.GetComponent<FreeFlyCamera>().enabled = true;
         gameObject.SetActive(false);
     }
 }
