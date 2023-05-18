@@ -53,7 +53,6 @@ public class ConnectUI : MonoBehaviour
 
     void Close()
     {
-        Camera.main.GetComponent<FreeFlyCamera>().enabled = true;
         gameObject.SetActive(false);
     }
 }

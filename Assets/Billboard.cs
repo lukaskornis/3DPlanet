@@ -3,8 +3,16 @@ using UnityEngine;
 [ExecuteAlways]
 public class Billboard : MonoBehaviour
 {
+    private Camera cam;
+    
     void LateUpdate()
     {
-        transform.LookAt(Camera.main.transform);
+        if (!cam)
+        {
+            cam = Camera.main;
+            return;
+        }
+        
+        transform.LookAt(cam.transform);
     }
 }
